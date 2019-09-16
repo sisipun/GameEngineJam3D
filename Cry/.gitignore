@@ -1,0 +1,15 @@
+*.dll
+*.exe
+*.pak
+*.lib
+*.DS_STORE
+Bin32/
+Bin64/
+BinTemp/
+*.log
+LogBackups/
+Tools/
+USER/
+luac.out
+Editor/UI/
+Editor/
