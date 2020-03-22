@@ -11,9 +11,9 @@
 | Show Enemies           | 1:05:34 |         |         |          |
 | Enemies movement       | 1:09:42 |         |         |          |
 | Hero Death From Enemy  | 1:26:56 |         |         |          |
-| Jumping                |         |         |         |          |
-| Maze                   |         |         |         |          |
-| Textures               |         |         |         |          |
-| Sounds                 |         |         |         |          |
-| Enemy AI               |         |         |         |          |
+| Jumping                | 1:40:03 |         |         |          |
+| Maze                   | 1:56:44 |         |         |          |
+| Textures               | 2:06:03 |         |         |          |
+| Sounds                 | 2:10:21 |         |         |          |
+| Enemy AI               | 2:46:40 |         |         |          |
 | Menu                   |         |         |         |          |
