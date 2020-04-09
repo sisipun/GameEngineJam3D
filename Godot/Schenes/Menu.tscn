@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/PlayButton.gd" type="Script" id=1]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -3.34045
+margin_right = 1018.66
+margin_bottom = 600.0
+color = Color( 0.180392, 0.490196, 0.572549, 1 )
+
+[node name="Title" type="Label" parent="."]
+margin_left = 433.67
+margin_top = 211.947
+margin_right = 566.67
+margin_bottom = 225.947
+text = "My awesome game"
+
+[node name="PlayButton" type="Button" parent="."]
+anchor_right = 1.0
+margin_left = 405.854
+margin_top = 253.868
+margin_right = -427.146
+margin_bottom = 338.868
+text = "Play"
+script = ExtResource( 1 )
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]

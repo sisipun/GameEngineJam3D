@@ -10,7 +10,7 @@ func _ready():
 func _physics_process(delta):
 	rotate_y(deg2rad(delta * ROTATION_SPEED))
 
-func _on_bonus_body_entered(body):
+func _on_body_entered(body):
 	if body.name == "Hero":
 		emit_signal("bonusCollected")
 		queue_free()
