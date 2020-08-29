@@ -1,0 +1,7 @@
+{
+	"files.exclude": {
+		"F:/Projects/GameEngineJam3D/UnrealEngine/.vscode": true,
+		"F:/Projects/GameEngineJam3D/UnrealEngine/Content": true,
+		"F:/Projects/GameEngineJam3D/UnrealEngine/Intermediate": true
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"files.exclude": {
+		"F:/Projects/UnrealEngine/Game/.vscode": true,
+		"F:/Projects/UnrealEngine/Game/Content": true,
+		"F:/Projects/UnrealEngine/Game/Intermediate": true
+	}
+}

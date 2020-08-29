@@ -1,0 +1,977 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "UnrealEngine Win32 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"Debug",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win32 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"Debug",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine Win32 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win32 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"Debug",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win32 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"DebugGame",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win32 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"DebugGame",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine Win32 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win32 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"DebugGame",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win32 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"Development",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win32 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"Development",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine Win32 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win32 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"Development",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win32 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"Shipping",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win32 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"Shipping",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine Win32 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win32 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"Shipping",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win32 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"Test",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win32 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"Test",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine Win32 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win32 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"Win32",
+				"Test",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"Debug",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"Debug",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"Debug",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"DebugGame",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"DebugGame",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"DebugGame",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"Development",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"Development",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"Development",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"Shipping",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"Shipping",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine Win64 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"Shipping",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"Test",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"Test",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine Win64 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine Win64 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"Win64",
+				"Test",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"Debug",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"Debug",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine HTML5 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"Debug",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"DebugGame",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"DebugGame",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine HTML5 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"DebugGame",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"Development",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"Development",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine HTML5 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"Development",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"Shipping",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"Shipping",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine HTML5 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"Shipping",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"Test",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"Test",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngine HTML5 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngine HTML5 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngine",
+				"HTML5",
+				"Test",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngineEditor Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngineEditor",
+				"Win64",
+				"Debug",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngineEditor Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngineEditor",
+				"Win64",
+				"Debug",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngineEditor Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngineEditor Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngineEditor",
+				"Win64",
+				"Debug",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngineEditor Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngineEditor",
+				"Win64",
+				"DebugGame",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngineEditor Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngineEditor",
+				"Win64",
+				"DebugGame",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngineEditor Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngineEditor Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngineEditor",
+				"Win64",
+				"DebugGame",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngineEditor Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngineEditor",
+				"Win64",
+				"Development",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngineEditor Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"UnrealEngineEditor",
+				"Win64",
+				"Development",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"UnrealEngineEditor Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		},
+		{
+			"label": "UnrealEngineEditor Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"UnrealEngineEditor",
+				"Win64",
+				"Development",
+				"F:\\Projects\\GameEngineJam3D\\UnrealEngine\\UnrealEngine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "F:\\Programms\\Epic Games\\UE_4.23"
+			}
+		}
+	]
+}

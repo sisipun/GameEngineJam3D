@@ -1,0 +1,3 @@
+F:\Projects\UnrealEngine\MyProject\Source\MyProject\MyProject.Build.cs
+F:\Projects\UnrealEngine\MyProject\Source\MyProject.Target.cs
+F:\Projects\UnrealEngine\MyProject\Source\MyProjectEditor.Target.cs

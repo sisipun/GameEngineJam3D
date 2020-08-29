@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-MyGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"F:\Projects\UnrealEngine\MyGame\Intermediate\Build\Win64\MyGameEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"F:\Projects\UnrealEngine\MyGame\Intermediate\Build\Win64\UE4Editor\Development\MyGame\MyGame.cpp.obj"
+"F:\Projects\UnrealEngine\MyGame\Intermediate\Build\Win64\UE4Editor\Development\MyGame\MyGameGameModeBase.cpp.obj"
+"F:\Projects\UnrealEngine\MyGame\Intermediate\Build\Win64\UE4Editor\Development\MyGame\MyGame.init.gen.cpp.obj"
+"F:\Projects\UnrealEngine\MyGame\Intermediate\Build\Win64\UE4Editor\Development\MyGame\MyGameGameModeBase.gen.cpp.obj"
+"F:\Projects\UnrealEngine\MyGame\Intermediate\Build\Win64\UE4Editor\Development\MyGame\Default.rc2.res"
+/OUT:"F:\Projects\UnrealEngine\MyGame\Intermediate\Build\Win64\UE4Editor\Development\MyGame\UE4Editor-MyGame.lib"
+/INCLUDE:IMPLEMENT_MODULE_MyGame

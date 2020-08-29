@@ -1,0 +1,2 @@
+F:\Projects\UnrealEngine\MyGame\Intermediate\Build\Win64\UE4Editor\Development\MyGame\Definitions.MyGame.h
+f:\projects\unrealengine\mygame\source\mygame\MyGame.h
