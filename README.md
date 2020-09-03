@@ -3,7 +3,7 @@
 | Show Ground            | 07:28   |  11:06  |  07:51  |
 | Show Hero              | 18:56   |  13:55  |  14:09  |
 | Hero Movement          | 20:14   |  26:03  |  32:45  |
-| Physics                | 20:16   |  26:05  |         |
+| Physics                | 20:16   |  26:05  |  49:46  |
 | Bonuses Generation     | 40:37   |  37:11  |         |
 | Game end if all bonuses| 56:58   |  42:22  |         |
 | View Score             | 1:01:12 |  51:00  |         |
