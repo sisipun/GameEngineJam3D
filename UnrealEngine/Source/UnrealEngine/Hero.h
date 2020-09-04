@@ -4,11 +4,10 @@
 
 #include "Camera/CameraComponent.h"
 #include "CoreMinimal.h"
+#include "Engine/CollisionProfile.h"
 #include "GameFramework/Pawn.h"
 #include "GameFramework/SpringArmComponent.h"
-#include "Engine/CollisionProfile.h"
 #include "Hero.generated.h"
-
 
 UCLASS()
 class UNREALENGINE_API AHero : public APawn
@@ -16,11 +15,13 @@ class UNREALENGINE_API AHero : public APawn
     GENERATED_BODY()
 
   public:
-    // Sets default values for this pawn's properties
     AHero();
 
-    // Called to bind functionality to input
     virtual void SetupPlayerInputComponent(class UInputComponent *PlayerInputComponent) override;
+
+    virtual void NotifyHit(class UPrimitiveComponent *MyComp, class AActor *Other, class UPrimitiveComponent *OtherComp,
+                           bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse,
+                           const FHitResult &Hit) override;
 
     UPROPERTY(VisibleAnywhere)
     UStaticMeshComponent *Ball;
