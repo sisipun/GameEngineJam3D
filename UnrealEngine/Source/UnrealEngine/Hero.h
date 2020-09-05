@@ -17,6 +17,8 @@ class UNREALENGINE_API AHero : public APawn
   public:
     AHero();
 
+    virtual void BeginPlay() override;
+
     virtual void SetupPlayerInputComponent(class UInputComponent *PlayerInputComponent) override;
 
     virtual void NotifyHit(class UPrimitiveComponent *MyComp, class AActor *Other, class UPrimitiveComponent *OtherComp,
@@ -37,4 +39,6 @@ class UNREALENGINE_API AHero : public APawn
 
     UPROPERTY(EditAnywhere)
     float RollTorque;
+
+    int Score;
 };

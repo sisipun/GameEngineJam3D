@@ -33,6 +33,13 @@ AHero::AHero()
     Camera->bUsePawnControlRotation = false;
 
     RollTorque = 10000000.0f;
+    Score = 0;
+}
+
+void AHero::BeginPlay()
+{
+    Super::BeginPlay();
+    UE_LOG(LogTemp, Warning, TEXT("Score: %d"), Score);
 }
 
 void AHero::SetupPlayerInputComponent(UInputComponent *PlayerInputComponent)
@@ -61,5 +68,9 @@ void AHero::NotifyHit(class UPrimitiveComponent *MyComp, class AActor *Other, cl
 {
     Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
 
-    UE_LOG(LogTemp, Warning, TEXT("%s"), *Other->GetName());
+    if (Other->GetName().Contains("Bonus"))
+    {
+        Score++;
+        UE_LOG(LogTemp, Warning, TEXT("Score: %d"), Score);
+    }
 }

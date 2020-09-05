@@ -5,9 +5,9 @@
 | Hero Movement          | 20:14   |  26:03  |  32:45  |
 | Physics                | 20:16   |  26:05  |  49:46  |
 | Bonuses Generation     | 40:37   |  37:11  |  59:01  |
-| Game end if all bonuses| 56:58   |  42:22  |         |
-| View Score             | 1:01:12 |  51:00  |         |
-| Change score           | 1:02:34 |  52:06  |         |
+| Game end if all bonuses| 56:58   |  42:22  | 1:04:31 |
+| View Score             | 1:01:12 |  51:00  | 1:21:55 |
+| Change score           | 1:02:34 |  52:06  | 1:24:11 |
 | Show Enemies           | 1:05:34 |  56:03  |         |
 | Enemies movement       | 1:09:42 | 1:14:09 |         |
 | Hero Death From Enemy  | 1:26:56 | 1:21:05 |         |
