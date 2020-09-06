@@ -6,23 +6,27 @@ ABonus::ABonus()
 {
     PrimaryActorTick.bCanEverTick = true;
 
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> CubeVisualAsset(TEXT("/Game/Meshes/CubeMesh.CubeMesh"));
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> BonusMesh(TEXT("/Game/Meshes/BonusMesh.BonusMesh"));
 
-    Cube = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Cube"));
-    Cube->SetupAttachment(RootComponent);
-    Cube->SetStaticMesh(CubeVisualAsset.Object);
-    Cube->SetRelativeLocationAndRotation(FVector(0.0f, 0.0f, 0.0f), FRotator(30.0f, 45.0f, 90.0f));
-	Cube->SetRelativeScale3D(FVector(0.5f, 0.5f, 0.5f));
-	Cube->SetNotifyRigidBodyCollision(true);
+    Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Cube"));
+    Mesh->SetStaticMesh(BonusMesh.Object);
+    Mesh->SetRelativeLocationAndRotation(FVector(0.0f, 0.0f, 0.0f), FRotator(30.0f, 45.0f, 90.0f));
+    Mesh->SetRelativeScale3D(FVector(0.5f, 0.5f, 0.5f));
+    Mesh->SetNotifyRigidBodyCollision(true);
+    Mesh->SetupAttachment(RootComponent);
 }
 
-void ABonus::NotifyHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+void ABonus::NotifyHit(class UPrimitiveComponent *MyComp, class AActor *Other, class UPrimitiveComponent *OtherComp,
+                       bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse,
+                       const FHitResult &Hit)
 {
-	Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
+    Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
 
-	Destroy();
+    if (Other->GetName().Contains("Hero"))
+    {
+        Destroy();
+    }
 }
-
 
 void ABonus::Tick(float DeltaTime)
 {

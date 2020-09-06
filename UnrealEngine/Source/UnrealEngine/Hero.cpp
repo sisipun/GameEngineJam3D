@@ -6,18 +6,18 @@ AHero::AHero()
 {
     AutoPossessPlayer = EAutoReceiveInput::Player0;
 
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> BallMesh(TEXT("/Game/Meshes/BallMesh.BallMesh"));
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> HeroMesh(TEXT("/Game/Meshes/HeroMesh.HeroMesh"));
 
-    Ball = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ball"));
-    Ball->SetStaticMesh(BallMesh.Object);
-    Ball->BodyInstance.SetCollisionProfileName(UCollisionProfile::PhysicsActor_ProfileName);
-    Ball->SetSimulatePhysics(true);
-    Ball->SetAngularDamping(0.1f);
-    Ball->SetLinearDamping(0.1f);
-    Ball->BodyInstance.MassScale = 3.5f;
-    Ball->BodyInstance.MaxAngularVelocity = 800.0f;
-    Ball->SetNotifyRigidBodyCollision(true);
-    RootComponent = Ball;
+    Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ball"));
+    Mesh->SetStaticMesh(HeroMesh.Object);
+    Mesh->BodyInstance.SetCollisionProfileName(UCollisionProfile::PhysicsActor_ProfileName);
+    Mesh->SetSimulatePhysics(true);
+    Mesh->SetAngularDamping(0.1f);
+    Mesh->SetLinearDamping(0.1f);
+    Mesh->BodyInstance.MassScale = 3.5f;
+    Mesh->BodyInstance.MaxAngularVelocity = 800.0f;
+    Mesh->SetNotifyRigidBodyCollision(true);
+    RootComponent = Mesh;
 
     SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
     SpringArm->SetupAttachment(RootComponent);
@@ -33,7 +33,10 @@ AHero::AHero()
     Camera->bUsePawnControlRotation = false;
 
     RollTorque = 10000000.0f;
+    JumpImpulse = 300000.0f;
     Score = 0;
+    Dead = false;
+    CanJump = true;
 }
 
 void AHero::BeginPlay()
@@ -48,18 +51,35 @@ void AHero::SetupPlayerInputComponent(UInputComponent *PlayerInputComponent)
 
     PlayerInputComponent->BindAxis("MoveX", this, &AHero::MoveXAxis);
     PlayerInputComponent->BindAxis("MoveY", this, &AHero::MoveYAxis);
+    PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AHero::Jump);
 }
 
 void AHero::MoveXAxis(float AxisValue)
 {
-    const FVector Torque = FVector(0.f, AxisValue * RollTorque, 0.f);
-    Ball->AddTorqueInRadians(Torque);
+    if (!Dead)
+    {
+        const FVector Torque = FVector(0.f, AxisValue * RollTorque, 0.f);
+        Mesh->AddTorqueInRadians(Torque);
+    }
+}
+
+void AHero::Jump()
+{
+    if (!Dead && CanJump)
+    {
+        const FVector Impulse = FVector(0.f, 0.f, JumpImpulse);
+        Mesh->AddImpulse(Impulse);
+        CanJump = false;
+    }
 }
 
 void AHero::MoveYAxis(float AxisValue)
 {
-    const FVector Torque = FVector(-1.f * AxisValue * RollTorque, 0.f, 0.f);
-    Ball->AddTorqueInRadians(Torque);
+    if (!Dead)
+    {
+        const FVector Torque = FVector(-1.f * AxisValue * RollTorque, 0.f, 0.f);
+        Mesh->AddTorqueInRadians(Torque);
+    }
 }
 
 void AHero::NotifyHit(class UPrimitiveComponent *MyComp, class AActor *Other, class UPrimitiveComponent *OtherComp,
@@ -68,9 +88,18 @@ void AHero::NotifyHit(class UPrimitiveComponent *MyComp, class AActor *Other, cl
 {
     Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
 
-    if (Other->GetName().Contains("Bonus"))
+    if (Other->GetName().Contains("Ground"))
+    {
+        CanJump = true;
+    }
+    else if (Other->GetName().Contains("Bonus"))
     {
         Score++;
         UE_LOG(LogTemp, Warning, TEXT("Score: %d"), Score);
+    }
+    else if (Other->GetName().Contains("Enemy"))
+    {
+        Dead = true;
+        UE_LOG(LogTemp, Warning, TEXT("Game over"));
     }
 }

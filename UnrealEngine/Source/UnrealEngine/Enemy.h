@@ -4,22 +4,34 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Bonus.generated.h"
+#include "Enemy.generated.h"
 
 UCLASS()
-class UNREALENGINE_API ABonus : public AActor
+class UNREALENGINE_API AEnemy : public AActor
 {
     GENERATED_BODY()
 
   public:
-    ABonus();
+    // Sets default values for this actor's properties
+    AEnemy();
 
     UPROPERTY(VisibleAnywhere)
     UStaticMeshComponent *Mesh;
 
-    virtual void Tick(float DeltaTime) override;
-
     virtual void NotifyHit(class UPrimitiveComponent *MyComp, class AActor *Other, class UPrimitiveComponent *OtherComp,
                            bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse,
                            const FHitResult &Hit) override;
+
+    virtual void Tick(float DeltaTime) override;
+
+    UPROPERTY(EditAnywhere)
+    float RollTorque;
+
+    UPROPERTY(EditAnywhere)
+    int MoveX;
+
+    UPROPERTY(EditAnywhere)
+    int MoveY;
+
+	FString LastCollider;
 };

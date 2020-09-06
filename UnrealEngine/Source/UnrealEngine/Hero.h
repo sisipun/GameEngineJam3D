@@ -26,7 +26,7 @@ class UNREALENGINE_API AHero : public APawn
                            const FHitResult &Hit) override;
 
     UPROPERTY(VisibleAnywhere)
-    UStaticMeshComponent *Ball;
+    UStaticMeshComponent *Mesh;
 
     UPROPERTY(VisibleAnywhere)
     USpringArmComponent *SpringArm;
@@ -36,9 +36,15 @@ class UNREALENGINE_API AHero : public APawn
 
     void MoveXAxis(float AxisValue);
     void MoveYAxis(float AxisValue);
+    void Jump();
 
     UPROPERTY(EditAnywhere)
     float RollTorque;
 
+    UPROPERTY(EditAnywhere)
+    float JumpImpulse;
+
     int Score;
+    bool Dead;
+    bool CanJump;
 };
